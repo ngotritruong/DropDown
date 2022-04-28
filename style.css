@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;;
+}
+body{
+    display: flex;
+    justify-content: center;
+    
+    min-height: 100vh;
+    background-color: #ffff;
+}
+.dropdown{
+    width: 350px;
+    top: 200px;
+    position: relative;
+}
+.dropdown::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid black;
+    z-index: 3;
+    right: 20px;
+    top: 17px;
+    border-top: #fff;
+    border-right: #fff ;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+}
+.dropdown.active::before{
+    top:21px;
+    transform: rotate(-225deg);
+}
+.dropdown input{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    border: none;
+    box-shadow: 0 5px 20px #b4a8a8;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    padding:20px;
+}
+.dropdown .option{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    box-shadow: 0 5px 20px #b4a8a8;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+.dropdown.active .option{
+    display: block;
+}
+.dropdown .option div:hover{
+    background-color: rgb(34, 158, 158);
+    color: #fff;
+}
+.dropdown .option div{
+    padding: 15px;
+    cursor: pointer;
+    background-color: #fff;
+
+}
+.dropdown .option div i{
+    top: 5px;
+    font-size: 1.2em;
+}

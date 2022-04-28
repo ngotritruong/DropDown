@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>DropDown</title>
+</head>
+<body>
+    <div class="dropdown">
+        <input type="text" class="textBox" placeholder="Dropdown manu" readonly>
+        <div class="option">
+            <div onclick="show('Html')"><i class="fa-brands fa-html5"></i> Html</div>
+            <div onclick="show('Css')"><i class="fa-brands fa-css3"></i> Css</div>
+            <div onclick="show('Javascript')"><i class="fa-brands fa-js"></i> Javascript</div>
+            <div onclick="show('Figma')"><i class="fa-brands fa-figma"></i> Figma</div>
+            <div onclick="show('React JS')"><i class="fa-brands fa-react"></i> React JS</div>
+        </div>
+    </div>
+    <script>
+        function show(words){
+            document.querySelector('.textBox').value = words;
+        }
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick = function(){
+            dropdown.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
